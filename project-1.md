@@ -1,5 +1,5 @@
 # WEB STACK IMPLEMENTATION (LAMP STACK) IN AWS
-A LAMP stack is a group of open source software that is typically installed together in order to enable a server to host dynamic websites and web apps written in PHP¹³. It consists of four components: Linux, Apache, MySQL, and PHP.
+A LAMP stack is a group of open source software that is typically installed together in order to enable a server to host dynamic websites and web apps written in PHP. It consists of four components: Linux, Apache, MySQL, and PHP.
 This project will try to implement .......
 
 Steps to completion
@@ -29,6 +29,10 @@ To install Apache 2 run the commands:
 ` sudo apt install apache2`
 
 `sudo systemctl status apache2`
+
+![Screenshot (188)](https://github.com/ettebaDwop/project-1/assets/7973831/c646288d-8091-4816-87ee-97eb89f72309)
+
+
 
 ![ apache status](./image/apache-status.png)
 
