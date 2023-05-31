@@ -16,6 +16,8 @@ Steps to completion
 We need a server and for the fact that most things are done in the cloud, we will ue a very effiv=ceint and cost effect cloud server on Amazon Web services(AWS). We will first 
 - Create an Amazon AWS account
 - Create and EC2 instance using ubuntu server(Linux)
+![Screenshot (208)](https://github.com/ettebaDwop/project-1/assets/7973831/f85163db-be53-4be6-bb06-3e0683fff1be)
+
 ### 2. Update Ubuntu package
 On connecting to the server, we would run the following commands:
 
