@@ -70,6 +70,14 @@ Test to see if you can log into mysql
 
 
 ### 5. Installing PhP
+Installing  PHP in our setup that will process code to display dynamic content to the end user. 
+To install PHP and its dependencies, run the command:
+
+`sudo apt install php libapache2-mod-php php-mysql`
+
+confirm the installlation
+
+`php -v`
 
 ### 6. Creating Virtual  Host for website using Apache
 `sudo mkdir /var/www/projectlamp`
