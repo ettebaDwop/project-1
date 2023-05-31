@@ -26,15 +26,15 @@ On connecting to the server, we would run the following commands:
 ### 3. Apache Installation
 To install Apache 2 run the commands:
 
-` sudo apt install apache2`
+   `sudo apt install apache2`
 
-`sudo systemctl status apache2`
+   `sudo systemctl status apache2`
 
 ![Screenshot (188)](https://github.com/ettebaDwop/project-1/assets/7973831/c646288d-8091-4816-87ee-97eb89f72309)
 
 To access the apache2 page, type in the url into a web browser
 
-`http://13.40.229.97/:80`
+   `http://13.40.229.97/:80`
 
 ![Screenshot (190)](https://github.com/ettebaDwop/project-1/assets/7973831/482681de-7f2c-481f-9fda-0306be04e6bc)
 
@@ -47,11 +47,11 @@ To access the apache2 page, type in the url into a web browser
 A Database Management System (DBMS) will need to be installed to be able to store and manage data for the website. MySQL is an RDBMS used within PHP environments
 To install MYSQL:
 
-`sudo apt install mysql-server`
+   `sudo apt install mysql-server`
 
  check to see if mysql is installed, run command:
  
-` sudo mysql`
+    `sudo mysql`
 
  ![Screenshot (192)](https://github.com/ettebaDwop/project-1/assets/7973831/e607519c-07c0-4c8e-a635-d37dd909643a)
 
@@ -59,26 +59,47 @@ To install MYSQL:
 A rocmendation is to run a security script to lock down access to your database 
 To secure MySQL installation, run this command:
 
-`sudo mysql_secure_installation`.
+    `sudo mysql_secure_installation`.
 
 
 ### 5. Installing PhP
 ### 6. Creating Virtual  Host for website using Apache
-### 7. Enabling PHP on website 
-To change the order of execution, run 
+`sudo mkdir /var/www/projectlamp`
 
-`sudo vim /etc/apache2/mods-enabled/dir.conf`
+` sudo chown -R $USER:$USER /var/www/projectlamp`
+
+`<VirtualHost *:80>
+    ServerName projectlamp
+    ServerAlias www.projectlamp
+    ServerAdmin webmaster@localhost
+    DocumentRoot /var/www/projectlamp
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+`</VirtualHost>`
+
+
+ 
+### 7. Enabling PHP on website 
+To enable php, we have to change the order of execution. The reason for this is that the index.html file would always take precedence in the order of execution over an index.php file. Thus , we will edit the configutation file by running the command:
+
+    `sudo vim /etc/apache2/mods-enabled/dir.conf`
+    
+Change the contents of the file to:
+
+`<IfModule mod_dir.c>
+        DirectoryIndex index.php index.html index.cgi index.pl index.xhtml index.htm
+ </IfModule>`
+ 
+* Note here that the first file is index.php as opposed to index.html
 
 Create a new file index.php in the root folder
 
-`vim /var/www/projectlamp/index.php`
+    `vim /var/www/projectlamp/index.php`
 
 Add the text below to the file to display the php page 
 
-`<?php
+    `<?php 
+       phpinfo();`
 
-  phpinfo();
-
-<?
-`
+![Screenshot (193)](https://github.com/ettebaDwop/project-1/assets/7973831/d12e9f0a-c890-403a-958c-6a4f7ba40889)
 
