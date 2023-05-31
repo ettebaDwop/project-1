@@ -115,6 +115,7 @@ The next thing to do is reload Apache to apply all changes.
     
 Open the website on the browser
 
+![Screenshot (211)](https://github.com/ettebaDwop/project-1/assets/7973831/d6b06048-8833-444b-96fb-5911546949d5)
 
  
  
