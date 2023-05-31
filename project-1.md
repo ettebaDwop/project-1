@@ -46,19 +46,39 @@ To access the apache2 page, type in the url into a web browser
 ### 4. Installing MySql
 A Database Management System (DBMS) will need to be installed to be able to store and manage data for the website. MySQL is an RDBMS used within PHP environments
 To install MYSQL:
+
 `sudo apt install mysql-server`
 
- check to see if mysql is installed , run command:
+ check to see if mysql is installed, run command:
  
 ` sudo mysql`
 
  ![Screenshot (192)](https://github.com/ettebaDwop/project-1/assets/7973831/e607519c-07c0-4c8e-a635-d37dd909643a)
 
-To secure MySQL installation, run this command: 
+
+A rocmendation is to run a security script to lock down access to your database 
+To secure MySQL installation, run this command:
+
 `sudo mysql_secure_installation`.
 
 
 ### 5. Installing PhP
 ### 6. Creating Virtual  Host for website using Apache
 ### 7. Enabling PHP on website 
+To change the order of execution, run 
+
+`sudo vim /etc/apache2/mods-enabled/dir.conf`
+
+Create a new file index.php in the root folder
+
+`vim /var/www/projectlamp/index.php`
+
+Add the text below to the file to display the php page 
+
+`<?php
+
+  phpinfo();
+
+<?
+`
 
