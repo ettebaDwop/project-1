@@ -65,6 +65,9 @@ To secure MySQL installation, run this command:
 Test to see if you can log into mysql
 
     `sudo mysql -p`
+    
+ ![Screenshot (197)](https://github.com/ettebaDwop/project-1/assets/7973831/3a48fdbd-623c-4e5c-9543-f60b56871506)
+
 
 ### 5. Installing PhP
 
