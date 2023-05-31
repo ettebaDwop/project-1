@@ -48,8 +48,13 @@ A Database Management System (DBMS) will need to be installed to be able to stor
 To install MYSQL:
 `sudo apt install mysql-server`
 
-To secure MySQL installation, run this command: 
+ check to see if mysql is installed , run command:
+ 
+` sudo mysql`
 
+ ![Screenshot (192)](https://github.com/ettebaDwop/project-1/assets/7973831/e607519c-07c0-4c8e-a635-d37dd909643a)
+
+To secure MySQL installation, run this command: 
 `sudo mysql_secure_installation`.
 
 
