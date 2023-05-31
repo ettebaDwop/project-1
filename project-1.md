@@ -44,9 +44,16 @@ To access the apache2 page, type in the url into a web browser
 [Linux Commands](https://www.hostinger.co.uk/tutorials/linux-commands)
 
 ### 4. Installing MySql
-Now that you have a web server up and running, you need to install a Database Management System (DBMS) to be able to store and manage data for your site in a relational database. MySQL is a popular relational database management system used within PHP environments, so we will use it in our project
-The MYSql serever would help to store and manage data for the site just created.
-### Installing PhP
-### Creating Virtual  Host for website using Apache
-### Enabling PHP on website 
+A Database Management System (DBMS) will need to be installed to be able to store and manage data for the website. MySQL is an RDBMS used within PHP environments
+To install MYSQL:
+`sudo apt install mysql-server`
+
+To secure MySQL installation, run this command: 
+
+`sudo mysql_secure_installation`.
+
+
+### 5. Installing PhP
+### 6. Creating Virtual  Host for website using Apache
+### 7. Enabling PHP on website 
 
