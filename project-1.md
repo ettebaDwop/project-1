@@ -55,30 +55,55 @@ To install MYSQL:
 
  ![Screenshot (192)](https://github.com/ettebaDwop/project-1/assets/7973831/e607519c-07c0-4c8e-a635-d37dd909643a)
 
+A recommendation is to run a security script to lock down access to your database
+    `ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'PassWord.1';`
 
-A rocmendation is to run a security script to lock down access to your database 
 To secure MySQL installation, run this command:
 
-    `sudo mysql_secure_installation`.
+    `sudo mysql_secure_installation`
+    
+Test to see if you can log into mysql
 
+    `sudo mysql -p`
 
 ### 5. Installing PhP
+
 ### 6. Creating Virtual  Host for website using Apache
 `sudo mkdir /var/www/projectlamp`
 
 ` sudo chown -R $USER:$USER /var/www/projectlamp`
 
-`<VirtualHost *:80>
+`sudo vi /etc/apache2/sites-available/projectlamp.conf`
+
+```
+<VirtualHost *:80>
     ServerName projectlamp
     ServerAlias www.projectlamp
     ServerAdmin webmaster@localhost
     DocumentRoot /var/www/projectlamp
     ErrorLog ${APACHE_LOG_DIR}/error.log
     CustomLog ${APACHE_LOG_DIR}/access.log combined
-`</VirtualHost>`
+</VirtualHost>
+```
+To enable a new virtial host, run:
 
+    `sudo a2ensite projectlamp`
+    
+It is recommended to disable Apache's default configuration so that our site would run. Thus command:
 
+    `sudo a2dissite 000-default`
+    
+The next thing to do is reload Apache to apply all changes.
+
+    `sudo systemctl reload apache2`
+    
+Open the website on the browser
+
+http://<Public-IP-Address>:80
  
+ 
+ 
+    
 ### 7. Enabling PHP on website 
 To enable php, we have to change the order of execution. The reason for this is that the index.html file would always take precedence in the order of execution over an index.php file. Thus , we will edit the configutation file by running the command:
 
