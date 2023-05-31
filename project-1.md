@@ -32,6 +32,11 @@ To install Apache 2 run the commands:
 
 ![Screenshot (188)](https://github.com/ettebaDwop/project-1/assets/7973831/c646288d-8091-4816-87ee-97eb89f72309)
 
+To access the apache2 page, type in the url into a web browser
+
+`http://13.40.229.97/:80`
+
+![Screenshot (190)](https://github.com/ettebaDwop/project-1/assets/7973831/482681de-7f2c-481f-9fda-0306be04e6bc)
 
 
 ![ apache status](./image/apache-status.png)
@@ -39,7 +44,8 @@ To install Apache 2 run the commands:
 [Linux Commands](https://www.hostinger.co.uk/tutorials/linux-commands)
 
 ### 4. Installing MySql
-
+Now that you have a web server up and running, you need to install a Database Management System (DBMS) to be able to store and manage data for your site in a relational database. MySQL is a popular relational database management system used within PHP environments, so we will use it in our project
+The MYSql serever would help to store and manage data for the site just created.
 ### Installing PhP
 ### Creating Virtual  Host for website using Apache
 ### Enabling PHP on website 
