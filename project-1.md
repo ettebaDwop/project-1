@@ -115,7 +115,7 @@ The next thing to do is reload Apache to apply all changes.
     
 Open the website on the browser
 
-http://<Public-IP-Address>:80
+
  
  
  
